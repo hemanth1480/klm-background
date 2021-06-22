@@ -1,0 +1,148 @@
+
+
+<div class="g">
+    <section class="lastsec">
+        
+        <div class="row">
+            
+            <div class="col-lg-6">
+                <div class="lcol">
+    
+                    
+                <table class="lasttab">   
+                    <th style="text-align: center;"><h4 class="workh">Working Hours</h4></th>    
+               <tr>
+                   <td class="ltd">Monday</td>
+                   <td class="rtd"> 9am - 5pm</td>
+               </tr>
+               <tr>
+                <td class="ltd">Tuesday</td>
+                <td class="rtd"> 9am - 5pm</td>
+            </tr>
+            <tr>
+                <td class="ltd">Wednesday</td>
+                <td class="rtd"> 9am - 5pm</td>
+            </tr>
+            <tr>
+                <td class="ltd">Thursday</td>
+                <td class="rtd"> 9am - 5pm</td>
+            </tr>
+            <tr>
+                <td class="ltd">Friday</td>
+                <td class="rtd"> 9am - 5pm</td>
+            </tr>
+            <tr>
+                <td class="ltd">Saturday</td>
+                <td class="rtd">9am - 1am</td>
+            </tr>
+            <tr>
+                <td class="ltd">Sunday</td>
+                <td class="rtd">Holiday</td>
+            </tr>
+            
+            </table>
+         </div>
+            </div>
+    
+            <!-- <div class="col-lg-1"></div> -->
+    
+           <div class="col-lg-6">
+                <div class="rcol">
+                    <div id="mov">
+    
+                  <h4>Socialise With Us</h4>
+                 <p>Contact Us via Social Networks</p>
+                 <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                 <a href="https://www.twitter.com/BuzzWebMedia" class="fa fa-twitter"></a>
+                 <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+            
+    
+            
+                 <h5>Subscribe</h5>
+              
+                 <form >
+                    <div class="form-group mx-sm-3 mb-2">
+                        <table>
+                        <tr>
+                            <td><input type="email" class="form-control" id="lastdiv" placeholder="Email Address"></td> 
+                        <td><button class="btn btn-primary mb-2" id="button"><img src="/images/email.png" style="width: 30px; height: 30px;" alt=""></button> </td>
+                    </tr>
+                    </table>
+                    </div>
+                     
+                 </form>
+    
+                 </div>
+                </div>
+           </div>
+    
+      
+        </div>
+    </section>
+    
+    </div>
+<p class="copyright"> <span style="margin-right: 27%;">Copyright &#169 2021 KLV Kingdom</span></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+
+<script>
+    var tl = new TimelineMax({onUpdate:updatePercentage});
+var tl2 = new TimelineMax();
+var tl3 = new TimelineMax();
+const controller = new ScrollMagic.Controller();
+
+// tl.from('.header', .5, {x:200, opacity: 0});
+tl.from('.s', 1.2, {opacity: 0, scale: 0});
+// tl.from('span', 1, { width: 0}, "=-.5");
+// tl.from('#img1', 1, {x:-200, opacity: 0,ease: Power4.easeInOut}, "=-1");
+// tl.from('#img2', 1, {x:200, opacity: 0, ease: Power4.easeInOut}, "=-1");
+// tl.from('#img3', 1, {x:200, opacity: 0, ease: Power4.easeInOut}, "=-1");
+// tl.from('#img4', 1, {x:200, opacity: 0, ease: Power4.easeInOut}, "=-1");
+
+tl2.from(".touchsec", 1, {opacity: 0, scale: 0});
+// tl.from('.contacti', 1, {x:-200, opacity: 0,ease: Power4.easeInOut}, "=-1");
+
+// tl2.from("#box", 1, {opacity: 0, scale: 0});
+// tl2.to("#box", .5, {left: "20%", scale: 1.3, borderColor: 'white', borderWidth: 12, boxShadow: '1px 1px 0px 0px rgba(0,0,0,0.09)'})
+
+tl3.from(".lastsec", 1, {opacity: 0, scale: 0});
+
+const scene = new ScrollMagic.Scene({
+triggerElement: ".head"
+        //   triggerHook: "onLeave",
+        //   duration: "100%"
+})
+// .setPin(".m")
+.setTween(tl)
+      .addTo(controller);
+
+const scene2 = new ScrollMagic.Scene({
+  triggerElement: ".conta"
+})
+  .setTween(tl2)
+		.addTo(controller);
+
+const scene3 = new ScrollMagic.Scene({
+triggerElement: ".lastspan"
+        //   triggerHook: "onLeave",
+        //   duration: "100%"
+})        
+.setTween(tl3)
+      .addTo(controller);
+
+
+function updatePercentage() {
+//percent.innerHTML = (tl.progress() *100 ).toFixed();
+tl.progress();
+//   console.log(tl.progress());
+}
+
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
